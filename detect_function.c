@@ -8,7 +8,7 @@
 int (*detect_fun(char choose))(va_list)
 {
 	int i = 0;
-	spec arr[] = {
+	detect arr[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percentage},
@@ -16,10 +16,10 @@ int (*detect_fun(char choose))(va_list)
 		{"i", print_integer},
 		{NULL, NULL}
 	};
-	while (arr[i].valid)
+	while (arr[i].pointer)
 	{
-		if (choose == arr[i].valid[0])
-			return (arr[i].f);
+		if (choose == arr[i].pointer[0])
+			return (arr[i].detect_fun);
 		i++;
 	}
 	return (NULL);
