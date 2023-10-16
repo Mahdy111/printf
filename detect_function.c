@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * detector_fun - choose the function will be used
+ * detect_fun - choose the function will be used
  * @choose: var to choose func
  * Return: the function
  */
