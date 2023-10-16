@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					m = detect_fun(format[i + 1]);
+					m = (int (*)(va_list)) detect_fun(format[i + 1]);
 					if (m)
 						counter += m(val);
 					else
