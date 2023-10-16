@@ -21,6 +21,6 @@ int print_string(va_list val);
 int print_integer(va_list val);
 int print_decimal(va_list val);
 int print_percentage(va_list val);
-int (det_fun(char choose))(va_list);
+int (detect_fun(char choose))(va_list);
 int _printf(const char *format, ...);
 #endif
