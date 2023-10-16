@@ -1,23 +1,26 @@
-#ifndef MAIN_H
-#define MAIN_H
+
+#ifndef PRINTF_MAIN_H
+#define PRINTF_MAIN_H
 #include<stdarg.h>
 #include<stdio.h>
 #include<string.h>
+
 /**
- * struct format - match the conversion specifiers for printf
- *@pointer: type char pointer of the specifier
- * @detect_fun: type pointer to function for the conversion specifier
- *
- */
+*struct format - structure specifier
+*@pointer: ch value
+*@detect_fun: a fun
+**/
 typedef struct format
 {
-char *pointer;
-int (*detect_fun)();
+char pointer;
+int (detect_fun)(va_list);
 } detect;
-int _putchar(char val);
+int _putchar(char c);
 int print_char(va_list val);
 int print_string(va_list val);
-int print_decimal(va_list args);
-int print_interger(va_list args);
+int print_integer(va_list val);
+int print_decimal(va_list val);
+int print_percentage(va_list val);
+int (detect_fun(char choose))(va_list);
+int _printf(const charformat, ...);
 #endif
-
