@@ -8,12 +8,12 @@
 /**
 *struct format - structure specifier
 *@pointer: ch value
-*@detect_fun: a fun
+*@det_fun: a fun
 **/
 typedef struct format
 {
 char pointer;
-int (detect_fun)(va_list);
+int (det_fun)(va_list);
 } detect;
 int _putchar(char c);
 int print_char(va_list val);
@@ -21,6 +21,6 @@ int print_string(va_list val);
 int print_integer(va_list val);
 int print_decimal(va_list val);
 int print_percentage(va_list val);
-int (detect_fun(char choose))(va_list);
-int _printf(const charformat, ...);
+int (det_fun(char choose))(va_list);
+int _printf(const char format, ...);
 #endif
