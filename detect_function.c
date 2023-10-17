@@ -19,7 +19,7 @@ int (*detect_fun(char choose))(va_list)
 	while (arr[i].pointer)
 	{
 		if (choose == arr[i].pointer[0])
-			return (arr[i].detect_fun);
+			return (arr[i].det_fun);
 		i++;
 	}
 	return (NULL);

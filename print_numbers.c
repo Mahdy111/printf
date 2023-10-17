@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
+
 /**
  * print_decimal - prints a decimal
  * @val: number0.0
@@ -9,7 +10,7 @@
 int print_decimal(va_list val)
 {
 
-	unsigned int abs, auto, co, counter;
+	unsigned int abs, co, counter, autoo;
 	int n;
 
 	counter = 0;
@@ -22,11 +23,11 @@ int print_decimal(va_list val)
 		else
 			abs = n;
 
-	auto = abs;
+	autoo = abs;
 	co = 1;
-	while (auto > 9)
+	while (autoo > 9)
 	{
-		auto /= 10;
+		autoo /= 10;
 		co *= 10;
 	}
 	while (co >= 1)
@@ -36,6 +37,7 @@ int print_decimal(va_list val)
 	}
 	return (counter);
 }
+
 /**
  * print_integer - print integer number
  * @val: integer data
