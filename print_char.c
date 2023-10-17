@@ -6,7 +6,7 @@
  */
 int print_char(va_list val)
 {
-char s = va_arg(c, int);
+char s = va_arg(val, int);
 
 _putchar(s);
 return (1);
